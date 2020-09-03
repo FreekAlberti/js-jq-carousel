@@ -20,6 +20,8 @@ $("document").ready(function () {
     }
   });
 
+/*
+
   var activeImgTmp = $(".images .first");
   var activeIndTmp = $(".nav .first");
 
@@ -93,6 +95,20 @@ $("document").ready(function () {
               break;
       }
   }
+
+*/
+
+  $(".nav i").click(
+    function() {
+    var circleIndex = $(this).index();
+    $("img").removeClass("active");
+    var indexImg = circleIndex + 1;
+    $("img:nth-child("+indexImg+")").addClass("active");
+
+    $(".nav i").removeClass("active");
+    $(this).addClass("active");
+    }
+  );
 
 })
 
